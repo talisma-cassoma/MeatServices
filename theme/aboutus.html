@@ -1,0 +1,801 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+   <!--
+    Basic Page Needs
+    ==================================================
+    -->
+   <meta charset="utf-8">
+   <title>  Ultimate Business Team</title>
+   <style>
+   html {
+  width: 100%;
+  height: 100%;
+}
+
+
+
+.tabs {
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+  transform: translateX(-50%);
+  position: relative;
+  background: white;
+  padding: 50px;
+  padding-bottom: 80px;
+  width: 70%;
+  height: 350px;
+  box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
+  border-radius: 5px;
+  min-width: 240px;
+}
+
+.tabs input[name="tab-control"] { display: none; }
+
+.tabs .content section h2, .tabs ul li label {
+  font-weight: bold;
+  font-size: 18px;
+  color: #428BFF;
+}
+
+.tabs ul {
+  list-style-type: none;
+  padding-left: 0;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  margin-bottom: 10px;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  -webkit-box-align: end;
+  -webkit-align-items: flex-end;
+  -ms-flex-align: end;
+  align-items: flex-end;
+  -webkit-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+}
+
+.tabs ul li {
+  box-sizing: border-box;
+  -webkit-box-flex: 1;
+  -webkit-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
+  width: 25%;
+  padding: 0 10px;
+  text-align: center;
+}
+
+.tabs ul li label {
+  -webkit-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+  color: #929daf;
+  padding: 5px auto;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: block;
+  cursor: pointer;
+  -webkit-transition: all 0.2s ease-in-out;
+  transition: all 0.2s ease-in-out;
+  white-space: nowrap;
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+.tabs ul li label br { display: none; }
+
+.tabs ul li label svg {
+  fill: #929daf;
+  height: 1.2em;
+  vertical-align: bottom;
+  margin-right: 0.2em;
+  -webkit-transition: all 0.2s ease-in-out;
+  transition: all 0.2s ease-in-out;
+}
+
+.tabs ul li label:hover, .tabs ul li label:focus, .tabs ul li label:active {
+  outline: 0;
+  color: #bec5cf;
+}
+
+.tabs ul li label:hover svg, .tabs ul li label:focus svg, .tabs ul li label:active svg { fill: #bec5cf; }
+
+.tabs .slider {
+  position: relative;
+  width: 25%;
+  -webkit-transition: all 0.33s cubic-bezier(0.38, 0.8, 0.32, 1.07);
+  transition: all 0.33s cubic-bezier(0.38, 0.8, 0.32, 1.07);
+}
+
+.tabs .slider .indicator {
+  position: relative;
+  width: 50px;
+  max-width: 100%;
+  margin: 0 auto;
+  height: 4px;
+  background: #428BFF;
+  border-radius: 1px;
+}
+
+.tabs .content { margin-top: 30px; }
+
+.tabs .content section {
+  display: none;
+  -webkit-animation-name: content;
+  animation-name: content;
+  -webkit-animation-direction: normal;
+  animation-direction: normal;
+  -webkit-animation-duration: 0.3s;
+  animation-duration: 0.3s;
+  -webkit-animation-timing-function: ease-in-out;
+  animation-timing-function: ease-in-out;
+  -webkit-animation-iteration-count: 1;
+  animation-iteration-count: 1;
+  line-height: 1.4;
+}
+
+.tabs .content section h2 {
+  color: #428BFF;
+  display: none;
+}
+
+.tabs .content section h2::after {
+  content: "";
+  position: relative;
+  display: block;
+  width: 30px;
+  height: 3px;
+  background: #428BFF;
+  margin-top: 5px;
+  left: 1px;
+}
+
+.tabs input[name="tab-control"]:nth-of-type(1):checked ~ ul > li:nth-child(1) > label {
+  cursor: default;
+  color: #428BFF;
+}
+
+.tabs input[name="tab-control"]:nth-of-type(1):checked ~ ul > li:nth-child(1) > label svg { fill: #428BFF; }
+@media (max-width: 600px) {
+
+.tabs input[name="tab-control"]:nth-of-type(1):checked ~ ul > li:nth-child(1) > label { background: rgba(0, 0, 0, 0.08); }
+}
+
+.tabs input[name="tab-control"]:nth-of-type(1):checked ~ .slider {
+  -webkit-transform: translateX(0%);
+  transform: translateX(0%);
+}
+
+.tabs input[name="tab-control"]:nth-of-type(1):checked ~ .content > section:nth-child(1) { display: block; }
+
+.tabs input[name="tab-control"]:nth-of-type(2):checked ~ ul > li:nth-child(2) > label {
+  cursor: default;
+  color: #428BFF;
+}
+
+.tabs input[name="tab-control"]:nth-of-type(2):checked ~ ul > li:nth-child(2) > label svg { fill: #428BFF; }
+@media (max-width: 600px) {
+
+.tabs input[name="tab-control"]:nth-of-type(2):checked ~ ul > li:nth-child(2) > label { background: rgba(0, 0, 0, 0.08); }
+}
+
+.tabs input[name="tab-control"]:nth-of-type(2):checked ~ .slider {
+  -webkit-transform: translateX(100%);
+  transform: translateX(100%);
+}
+
+.tabs input[name="tab-control"]:nth-of-type(2):checked ~ .content > section:nth-child(2) { display: block; }
+
+.tabs input[name="tab-control"]:nth-of-type(3):checked ~ ul > li:nth-child(3) > label {
+  cursor: default;
+  color: #428BFF;
+}
+
+.tabs input[name="tab-control"]:nth-of-type(3):checked ~ ul > li:nth-child(3) > label svg { fill: #428BFF; }
+@media (max-width: 600px) {
+
+.tabs input[name="tab-control"]:nth-of-type(3):checked ~ ul > li:nth-child(3) > label { background: rgba(0, 0, 0, 0.08); }
+}
+
+.tabs input[name="tab-control"]:nth-of-type(3):checked ~ .slider {
+  -webkit-transform: translateX(200%);
+  transform: translateX(200%);
+}
+
+.tabs input[name="tab-control"]:nth-of-type(3):checked ~ .content > section:nth-child(3) { display: block; }
+
+.tabs input[name="tab-control"]:nth-of-type(4):checked ~ ul > li:nth-child(4) > label {
+  cursor: default;
+  color: #428BFF;
+}
+
+.tabs input[name="tab-control"]:nth-of-type(4):checked ~ ul > li:nth-child(4) > label svg { fill: #428BFF; }
+@media (max-width: 600px) {
+
+.tabs input[name="tab-control"]:nth-of-type(4):checked ~ ul > li:nth-child(4) > label { background: rgba(0, 0, 0, 0.08); }
+}
+
+.tabs input[name="tab-control"]:nth-of-type(4):checked ~ .slider {
+  -webkit-transform: translateX(300%);
+  transform: translateX(300%);
+}
+
+.tabs input[name="tab-control"]:nth-of-type(4):checked ~ .content > section:nth-child(4) { display: block; }
+@-webkit-keyframes 
+content {  from {
+ opacity: 0;
+ -webkit-transform: translateY(5%);
+ transform: translateY(5%);
+}
+
+to {
+  opacity: 1;
+  -webkit-transform: translateY(0%);
+  transform: translateY(0%);
+}
+}
+@keyframes 
+content {  from {
+ opacity: 0;
+ -webkit-transform: translateY(5%);
+ transform: translateY(5%);
+}
+
+to {
+  opacity: 1;
+  -webkit-transform: translateY(0%);
+  transform: translateY(0%);
+}
+}
+@media (max-width: 1000px) {
+
+.tabs ul li label { white-space: initial; }
+
+.tabs ul li label br { display: initial; }
+
+.tabs ul li label svg { height: 1.5em; }
+}
+@media (max-width: 600px) {
+
+.tabs ul li label {
+  padding: 5px;
+  border-radius: 5px;
+}
+
+.tabs ul li label span { display: none; }
+
+.tabs .slider { display: none; }
+
+.tabs .content { margin-top: 20px; }
+
+.tabs .content section h2 { display: block; }
+}
+</style>
+   <!--
+    Mobile Specific Metas
+    ==================================================
+    -->
+   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+   <!--
+    CSS
+    ==================================================
+    -->
+   <!-- Bootstrap-->
+   <link rel="stylesheet" href="css/bootstrap.min.css">
+   <!-- Animation-->
+   <link rel="stylesheet" href="css/animate.css">
+   <!-- Morris CSS -->
+   <link rel="stylesheet" href="css/morris.css">
+   <!-- FontAwesome-->
+   <link rel="stylesheet" href="css/font-awesome.min.css">
+   <!-- Icon font-->
+   <link rel="stylesheet" href="css/icon-font.css">
+   <!-- Owl Carousel-->
+   
+   
+   <link rel="stylesheet" href="css/owl.carousel.min.css">
+   <!-- Owl Theme -->
+   <link rel="stylesheet" href="css/owl.theme.default.min.css">
+   <!-- Colorbox-->
+   <link rel="stylesheet" href="css/colorbox.css">
+   <!-- Template styles-->
+   <link rel="stylesheet" href="css/style.css">
+   <!-- Responsive styles-->
+   <link rel="stylesheet" href="css/responsive.css">
+   <!-- HTML5 shim, for IE6-8 support of HTML5 elements. All other JS at the end of file.-->
+   <!--if lt IE 9
+    script(src='js/html5shiv.js')
+    script(src='js/respond.min.js')
+    -->
+</head>
+
+<body>
+
+   <div class="body-inner">
+
+      <div class="site-top-2">
+         <header class="header nav-down" id="header-2">
+            <div class="container">
+               <div class="row">
+                  <div class="logo-area clearfix">
+                     <div class="logo col-lg-3 col-md-12">
+                        <a href="index.html">
+                           <img src="images/logo.png" alt="">
+                        </a>
+                     </div>
+                     <!-- logo end-->
+                     <div class="col-lg-9 col-md-12 pull-right">
+                        <ul class="top-info unstyled">
+                           <li><span class="info-icon"><i class="icon icon-phone3"></i></span>
+                              <div class="info-wrapper">
+                                 <p class="info-title">24/7 Response Time</p>
+                                 <p class="info-subtitle">(+212) 658-380381</p>
+                              </div>
+                           </li>
+                           <li><span class="info-icon"><i class="icon icon-envelope"></i></span>
+                              <div class="info-wrapper">
+                                 <p class="info-title">Send Your Query</p>
+                                 <p class="info-subtitle">contact@ubt.ma</p>
+                              </div>
+                           </li>
+                           
+                        </ul>
+                     </div>
+                     <!-- Col End-->
+                  </div>
+                  <!-- Logo Area End-->
+               </div>
+            </div>
+            <!-- Container end-->
+            <div class="site-nav-inner site-navigation navigation navdown">
+               <div class="container">
+                  <nav class="navbar navbar-expand-lg ">
+                     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                        aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"><i class="icon icon-menu"></i></span></button>
+                     <!-- End of Navbar toggler-->
+                     <div class="collapse navbar-collapse justify-content-start" id="navbarSupportedContent">
+                        <ul class="navbar-nav">
+                           <li class="nav-item dropdown active"><a class="nav-link" href="#" data-toggle="dropdown">Home</a>
+                           </li>
+                           <!-- li end-->
+                           <li class="nav-item dropdown"><a class="nav-link" href="#" data-toggle="dropdown">Services<i class="fa fa-angle-down"></i></a>
+                              <ul class="dropdown-menu" role="menu">
+                                 <li><a href="about.html">Global Customer Service Call Center </a></li>
+                                 <li><a href="team.html">Outsourced Tech Support Call Center</a></li>
+                                 <li><a href="pricing-table.html">Outsourced Sales Call Center
+                                 <li><a href="faq.html">Social Media Management</a></li>
+                                 <li><a href="gallery.html">Content Moderation</a></li>
+                                 <li><a href="gallery.html">IT Services</a></li>
+                              </ul>
+                           </li>
+                           <!-- li end-->
+                           <li class="nav-item dropdown"><a class="nav-link" href="#" data-toggle="dropdown">Languages<i class="fa fa-angle-down"></i></a>
+                              <ul class="dropdown-menu" role="menu">
+                                 <li><a href="project-all.html">English Call Center Services</a></li>
+                                 <li><a href="#">Spanish Call Center Services</a></li>
+                                 <li><a href="#">French Call Center Services</a></li>
+                                 <li><a href="#">Arabic Call Center Services</a></li>
+                                 <li><a href="#">Italian Call Center Services</a></li>
+                                 <li><a href="#">Portuguese Call Center Services</a></li>
+                                 <li><a href="#">German Call Center Services</a></li>
+                                 <li><a href="#">Dutch Call Center Services</a></li>
+                              </ul>
+                           </li>
+                           <!-- li end-->
+                           <li class="nav-item dropdown"><a class="nav-link" href="#" data-toggle="dropdown">Clients</a>
+                           </li>
+                           <!-- li end-->
+                           <li class="nav-item dropdown"><a class="nav-link" href="#" data-toggle="dropdown">About us</a>
+                           </li>
+                           <!-- li end-->
+                           <li class="nav-item dropdown">
+                                 <a href="contact.html">Contact</a>
+                           </li>
+                        </ul>
+                        <!--Nav ul end-->
+                     </div>
+                     <a href="" class="top-right-btn btn btn-primary">Request a Quote</a>
+                     <!-- Top bar btn -->
+                  </nav>
+                  <!-- Collapse end-->
+
+                  
+                  
+               </div>
+            </div>
+            <!-- Site nav inner end-->
+         </header>
+         <!-- Header end-->
+      </div>
+
+
+      <div class="banner-area" id="banner-area" style="background-image:url(images/banner/banner1.jpg);">
+         <div class="container">
+            <div class="row justify-content-center">
+               <div class="col">
+                  <div class="banner-heading">
+                     <h1 class="banner-title">About Us</h1>
+                     <ol class="breadcrumb">
+                        <li>Home</li>
+                        <li><a href="#">About Us</a></li>
+                     </ol>
+                  </div>
+               </div>
+               <!-- Col end-->
+            </div>
+            <!-- Row end-->
+         </div>
+         <!-- Container end-->
+      </div>
+      <!-- Banner area end-->
+      <section class="main-container no-padding" id="main-container">
+
+         <div>
+            <p>Callnovo is a leading outsourced contact center ( call center ) service provider specializing in customer services and technical support. We provide multilingual call center outsourced operation and omni-channel contact center and CRM technology solution. We provide professional, flexible and customized call center solutions to small and large international companies.</br>
+
+With more than 15 years experience in many different industries and ability to serve 35 languages in the global market, our goal is to build your outsourced call center with us a superior communication channel and a great service team for your business. Now you can focus on your core business with peace of mind and let Callnovo does professional and high-quality job on the call center part.</br>
+
+Callnovo’s main strategy is global deployment and operation. For example, we provide Chinese Mandarin and Cantonese call center from China mainland, English call center from Philippines, Spanish call center and French from South America, Vietnamese call center from Vietnam. Very importantly, we put lots of efforts on HR and staff training. We believe the competitiveness on call center cost can provide creative strategy and unique advantages to our clients businesses. Our multi-lingual one-stop call center solution can also help clients expand business outreach in the global market quickly and nimbly.</p>
+         </div>
+
+         <div class="tabs">
+  <input type="radio" id="tab1" name="tab-control" checked>
+  <input type="radio" id="tab2" name="tab-control">
+  <input type="radio" id="tab3" name="tab-control">
+  <input type="radio" id="tab4" name="tab-control">
+  <ul>
+    <li title="Features">
+      <label for="tab1" role="button"><svg viewBox="0 0 24 24">
+        <path d="M14,2A8,8 0 0,0 6,10A8,8 0 0,0 14,18A8,8 0 0,0 22,10H20C20,13.32 17.32,16 14,16A6,6 0 0,1 8,10A6,6 0 0,1 14,4C14.43,4 14.86,4.05 15.27,4.14L16.88,2.54C15.96,2.18 15,2 14,2M20.59,3.58L14,10.17L11.62,7.79L10.21,9.21L14,13L22,5M4.93,5.82C3.08,7.34 2,9.61 2,12A8,8 0 0,0 10,20C10.64,20 11.27,19.92 11.88,19.77C10.12,19.38 8.5,18.5 7.17,17.29C5.22,16.25 4,14.21 4,12C4,11.7 4.03,11.41 4.07,11.11C4.03,10.74 4,10.37 4,10C4,8.56 4.32,7.13 4.93,5.82Z"/>
+        </svg><br>
+        <span>We're Professional!</span></label>
+    </li>
+    <li title="Delivery Contents">
+      <label for="tab2" role="button"><svg viewBox="0 0 24 24">
+        <path d="M2,10.96C1.5,10.68 1.35,10.07 1.63,9.59L3.13,7C3.24,6.8 3.41,6.66 3.6,6.58L11.43,2.18C11.59,2.06 11.79,2 12,2C12.21,2 12.41,2.06 12.57,2.18L20.47,6.62C20.66,6.72 20.82,6.88 20.91,7.08L22.36,9.6C22.64,10.08 22.47,10.69 22,10.96L21,11.54V16.5C21,16.88 20.79,17.21 20.47,17.38L12.57,21.82C12.41,21.94 12.21,22 12,22C11.79,22 11.59,21.94 11.43,21.82L3.53,17.38C3.21,17.21 3,16.88 3,16.5V10.96C2.7,11.13 2.32,11.14 2,10.96M12,4.15V4.15L12,10.85V10.85L17.96,7.5L12,4.15M5,15.91L11,19.29V12.58L5,9.21V15.91M19,15.91V12.69L14,15.59C13.67,15.77 13.3,15.76 13,15.6V19.29L19,15.91M13.85,13.36L20.13,9.73L19.55,8.72L13.27,12.35L13.85,13.36Z" />
+        </svg><br>
+        <span>We're Flexible!</span></label>
+    </li>
+    <li title="Shipping">
+      <label for="tab3" role="button"><svg viewBox="0 0 24 24">
+        <path d="M3,4A2,2 0 0,0 1,6V17H3A3,3 0 0,0 6,20A3,3 0 0,0 9,17H15A3,3 0 0,0 18,20A3,3 0 0,0 21,17H23V12L20,8H17V4M10,6L14,10L10,14V11H4V9H10M17,9.5H19.5L21.47,12H17M6,15.5A1.5,1.5 0 0,1 7.5,17A1.5,1.5 0 0,1 6,18.5A1.5,1.5 0 0,1 4.5,17A1.5,1.5 0 0,1 6,15.5M18,15.5A1.5,1.5 0 0,1 19.5,17A1.5,1.5 0 0,1 18,18.5A1.5,1.5 0 0,1 16.5,17A1.5,1.5 0 0,1 18,15.5Z" />
+        </svg><br>
+        <span>We Work for Your Goals!</span></label>
+    </li>
+    <li title="Returns">
+      <label for="tab4" role="button"><svg viewBox="0 0 24 24">
+        <path d="M11,9H13V7H11M12,20C7.59,20 4,16.41 4,12C4,7.59 7.59,4 12,4C16.41,4 20,7.59 20,12C20,16.41 16.41,20 12,20M12,2A10,10 0 0,0 2,12A10,10 0 0,0 12,22A10,10 0 0,0 22,12A10,10 0 0,0 12,2M11,17H13V11H11V17Z" />
+        </svg><br>
+        <span>Our Strategy</span></label>
+    </li>
+  </ul>
+         <div class="slider">
+    <div class="indicator"></div>
+  </div>
+  <div class="content">
+    <section>
+      <h2>We're Professional!</h2>
+      UBT is a Outsourced Call Center Service provider. We are professional With 15+ years of experience in many different industries, we know how to get the job done. From fashion to real estate to e-Commerce, we have it all! We have a team with a vast amount of knowledge and amazing customer service skills! We will handle all of your calls other communications in a professional manner while ensuring that every customer receives friendly and knowledgeable help. Every service we offer is of the highest quality. And because we have a wealth of experience, we can assure you that the work we do is thoughtful and tailored to your needs. When your brand works with our team, you’re receiving the best care possible</section>
+    <section>
+      <h2>We're Flexible!</h2>
+      We are available 24/7/365 so that you don’t have to be. We can also serve 35 languages in the global market. This is thanks to our global deployment strategy. We can also arrange agents working on a customized schedule to match your business needs. Today’s digital world calls for an expansion into the global market. With the ever-increasing importance of social media to the market, it is crucial for you to be able to talk to people all over the world through any channel. Multiple Communication channel strategy is essential to all businesses. Get a foot in the global market with our state-of-the-art CRM platform. We have contact center technology advantage and contact center locations across several continents. Our contact centers are everywhere from Asia to Africa to Europe to South America!</section>
+    <section>
+      <h2>We Work for Your Goals!</h2>
+      Our goal is to make your outsourced call center with us a superior communication channel and a great team for your business. Now you can focus on your core business with peace of mind and let Callnovo do its professional and high-quality job on the call center part. This will lead to greater customer satisfaction for you! Your customers will have great service and help from us. You can also focus more on other goals for yourself and your business instead of worrying about calls. It’s truly an investment. Time is money, after all, and instead of spending your time on customer service calls, you could have people specialized in that area taking care of it on your behalf. Think of all the opportunities! Additionally, we work for you. We ensure that we are providing you with high-quality service that meets your needs, not ours.</section>
+    <section>
+      <h2>Our Strategy</h2>
+      UBT’s main strategy is global deployment and operation. For example, we provide Chinese Mandarin and Cantonese call center from China mainland, English call center from the Philippines, Spanish call center and French from South America, Vietnamese call center from Vietnam. Very importantly, we put lots of efforts on HR and staff training. We believe the competitiveness on call center cost can provide creative strategy and unique advantages to our clients’ businesses. Our multi-lingual one-stop call center solution can also help clients expand business outreach in the global market quickly and nimbly.</section>
+  </div>
+         </section>
+      
+
+      <section>
+         <div class="container mt-5 mb-2">
+    <div class="row">
+        <div class="col-lg-4">
+            <div class="card auto">
+                <div class="d-flex justify-content-between">
+                    <div class="d-flex flex-row align-items-center">
+                        <ul>
+                           <li>Amazon Seller Customer Service Operations</li>
+                           <li>E-Commerce Website Listing Management</li>
+                           <li>Welcome Calls</li>
+                           <li>Account / Payment Information Updating</li>
+                           <li>Cancellation / Re-activation / Retention</li>
+                           <li>Complaints and Issues Resolution</li>
+                           <li>Account Top Up</li>
+                        </ul>
+                  </div>
+            </div>
+        </div>
+     </div>
+        <div class="col-lg-4">
+            <div class="card auto">
+                <div class="d-flex justify-content-between">
+                    <div class="d-flex flex-row align-items-center">
+                        <ul>
+                           <li>Refund Management</li>
+                           <li>Billing Inquiries</li>
+                           <li>Real Estate Virtual Assistance</li>
+                           <li>Airline Information and Ticket Booking</li>
+                           <li>Hotel Booking</li>
+                           <li>Product Repair and Exchange Inquiries</li>
+                           <li>Customer Satisfaction Surveying</li>
+                        </ul>
+            </div>
+        </div>
+     </div>
+        </div>
+            </div>
+        </div>
+
+      </section>
+
+
+      <section id="tw-service-value" class="tw-service-value bg-offwhite">
+         <h2 class="column-title text-center">Company Progress</h2>
+         <div class="container">
+            <div class="row">
+               <div class="col-md-3 col-lg-3 text-center">
+                  <div class="percent-area">
+                     <div class="chart" data-percent="71">
+                        <p class="percent">71%</p>
+                     </div>
+                     <p class="column-title">2014</p>
+                     <!-- Chart end -->
+                  </div>
+                  <!-- Percent area end -->
+               </div>
+               <div class="col-md-3 col-lg-3 text-center">
+                  <div class="percent-area">
+                     <div class="chart" data-percent="75">
+                        <p class="percent">75%</p>
+                     </div>
+                     <p class="column-title">2015</p>
+                     <!-- Chart end -->
+                  </div>
+                  <!-- Percent area end -->
+               </div>
+               <div class="col-md-3 col-lg-3 text-center">
+                  <div class="percent-area">
+                     <div class="chart" data-percent="80">
+                        <p class="percent">80%</p>
+                     </div>
+                     <p class="column-title">2016</p>
+                     <!-- Chart end -->
+                  </div>
+                  <!-- Percent area end -->
+               </div>
+               <div class="col-md-3 col-lg-3 text-center">
+                  <div class="percent-area">
+                     <div class="chart" data-percent="90">
+                        <p class="percent">90%</p>
+                     </div>
+                     <p class="column-title">2017</p>
+                     <!-- Chart end -->
+                  </div>
+                  <!-- Percent area end -->
+               </div>
+            </div>
+            <!-- Content Row End -->
+         </div>
+         <!-- Container End -->
+      </section>
+      <!-- Service Value End -->
+   
+      <section id="ts-features-light" class="ts-features-light">
+         <div class="container">
+            <div class="row text-center">
+               <div class="col-md-12">
+                  <h2 class="section-title"><span>Why Us?</span>Our Core Value</h2>
+               </div>
+            </div>
+            <!-- Title row end -->
+            <div class="row">
+               <div class="col-lg-4 col-md-4 text-center">
+                  <div class="ts-feature-box">
+                     <div class="ts-feature-info">
+                        <img src="images/icon/why-1.png" alt="">
+                        <h3 class="ts-feature-title">Responsibility</h3>
+                        <p>Passionate Client Success Manager guides client through the initial implementation process into the future ongoing long-term high quality customer experience operation success in all languages globally.</p>
+                     </div>
+                  </div>
+                  <!-- feature box-1 end-->
+               </div>
+               <!-- col-1 end-->
+               <div class="col-lg-4 col-md-4 text-center">
+                  <div class="ts-feature-box">
+                     <div class="ts-feature-info">
+                        <img src="images/icon/why-3.png" alt="">
+                        <h3 class="ts-feature-title">Quality</h3>
+                        <p>We screens out qualified talents, guides client through the training and pre-launch assessment, then consistently monitors CSAT, Client monthly review, agent attandance, KPI, as well as team spirit etc.</p>
+                     </div>
+                  </div>
+                  <!-- feature box-2 end-->
+               </div>
+               <!-- col-2 end-->
+               <div class="col-lg-4 col-md-4 text-center">
+                  <div class="ts-feature-box">
+                     <div class="ts-feature-info">
+                        <img src="images/icon/why-2.png " alt="">
+                        <h3 class="ts-feature-title">Flexibility</h3>
+                        <p>1 FTE minimum team size; Fast deployment on service team and contact center techonlogy globally; Supporting client scaling up and scaling down quickly.</p>
+                     </div>
+                  </div>
+                  <!-- feature box-2 end-->
+               </div>
+               <div class="col-lg-4 col-md-4 text-center">
+                  <div class="ts-feature-box">
+                     <div class="ts-feature-info">
+                        <img src="images/icon/why-2.png " alt="">
+                        <h3 class="ts-feature-title">Cost Savings</h3>
+                        <p>At a fraction of cost of client in-house hiring, Callnovo as a one-stop provider to handles client global customer service needs with native or near-native speakers, as well as home-grown state-of-the-art technology.</p>
+                     </div>
+                  </div>
+                  <!-- feature box-2 end-->
+               </div>
+               <!-- col-3 end-->
+            </div>
+         </div>
+      </section>
+      <!-- feature light end -->
+
+      <!-- Footer start-->
+      <footer class="footer" id="footer">
+         <div class="footer-main bg-overlay">
+            <div class="container">
+               <div class="row">
+                  <div class="col-lg-4 col-md-12 footer-widget footer-about">
+                     <div class="footer-logo">
+                        <img src="images/footer-logo.png" alt="">
+                     </div>
+                     <p>Transline Logistics is the UK's leading freight forwarding, Midst brought winged midst beast years, be very was. Brought that called creeping</p>
+                     
+                     <h3 class="widget-title">Subscribe Newsletter!</h3>
+                     <form class="newsletter-form" id="newsletter-form" action="#" method="post">
+                        <div class="form-group">
+                           <input class="form-control form-control-lg" id="newsletter-form-email" type="email" name="email" placeholder="Email "
+                              autocomplete="off">
+                           <button class="btn btn-primary"><i class="fa fa-paper-plane"></i></button>
+                        </div>
+                     </form>
+                  </div>
+                  <!-- About us end-->
+                  <div class="col-lg-4 col-md-6 footer-widget">
+                     <h3 class="widget-title">Quick Links</h3>
+                     <ul class="list-dash">
+                      <li><a href="about.html">About Us</a></li>
+                      <li><a href="service.html">Our Services</a></li>
+                      <li><a href="project-all.html">Projects</a></li>
+                      <li><a href="team.html">Our Team</a></li>
+                      <li><a href="faq.html">FAQs</a></li>
+                      <li><a href="news-left-sidebar.html">Our Blog</a></li>
+                      <li><a href="news-right-sidebar.html">Why Need Agent?</a></li>
+                      <li><a href="pricing-table.html">Investments</a></li>
+                      <li><a href="contact.html">Consultation</a></li>
+                      <li><a href="contact.html">Contact Us</a></li>
+                    </ul>
+                  </div>
+                  <div class="col-lg-4 col-md-6 footer-widget">
+                     <h3 class="widget-title">Company Locations</h3>
+                     <div class="ts-contact-info"><span class="ts-contact-icon float-left"><i class="icon icon-map-marker2"></i></span>
+                        <div class="ts-contact-content">
+                           <h3 class="ts-contact-title">Address</h3>
+                           <p>370 Grove Street East Northport, NY 11731</p>
+                        </div>
+                        <!-- Contact content end-->
+                     </div>
+                     
+                     <div class="ts-contact-info last"><span class="ts-contact-icon float-left"><i class="icon icon-envelope"></i></span>
+                        <div class="ts-contact-content">
+                           <h3 class="ts-contact-title">Email Address</h3>
+                           <p>support@transline.com</p>
+                        </div>
+                        <!-- Contact content end-->
+                     </div>
+                     
+                     <div class="ts-contact-info"><span class="ts-contact-icon float-left"><i class="icon icon-phone3"></i></span>
+                        <div class="ts-contact-content">
+                           <h3 class="ts-contact-title">Phone Number</h3>
+                           <p>+1(0123) 4567 890, +1(0231) 3421 453</p>
+                        </div>
+                        <!-- Contact content end-->
+                     </div>
+                  </div>
+               </div>
+               <!-- Content row end-->
+            </div>
+            <!-- Container end-->
+         </div>
+         <!-- Footer Main-->
+         <div class="copyright">
+          <div class="container">
+             <div class="row">
+                <div class="col-lg-6 col-md-12">
+                   <div class="copyright-info"><span>Copyright © 2022 a theme by <a href="https://furioustheme.com">Furioustheme</a></span></div>
+                </div>
+                <div class="col-lg-6 col-md-12">
+                  <div class="footer-social text-right">
+                      <ul>
+                         <li><a href="https://facebook.com"><i class="fa fa-facebook"></i></a></li>
+                         <li><a href="https://twitter.com"><i class="fa fa-twitter"></i></a></li>
+                         <li><a href="https://plus.google.com"><i class="fa fa-google-plus"></i></a></li>
+                         <li><a href="https://github.com"><i class="fa fa-github"></i></a></li>
+                         <li><a href="https://instagram.com"><i class="fa fa-instagram"></i></a></li>
+                      </ul>
+                   </div>
+                </div>
+             </div>
+             <!-- Row end-->
+          </div>
+          <!-- Container end-->
+       </div>
+         <!-- Copyright end-->
+      </footer>
+      <!-- Footer end-->
+
+      <div class="back-to-top affix" id="back-to-top" data-spy="affix" data-offset-top="10">
+         <button class="btn btn-primary" title="Back to Top"><i class="fa fa-angle-double-up"></i>
+            <!-- icon end-->
+         </button>
+         <!-- button end-->
+      </div>
+      <!-- End Back to Top-->
+
+      <!--
+      Javascript Files
+      ==================================================
+      -->
+      <!-- initialize jQuery Library-->
+      <script type="text/javascript" src="js/jquery.js"></script>
+       
+       
+      <!-- Bootstrap jQuery-->
+      <script type="text/javascript" src="js/bootstrap.min.js"></script>
+      <!-- Owl Carousel-->
+      <script type="text/javascript" src="js/owl.carousel.min.js"></script>
+      <!-- Counter-->
+      <script type="text/javascript" src="js/jquery.counterup.min.js"></script>
+      <!-- Waypoints-->
+      <script type="text/javascript" src="js/waypoints.min.js"></script>
+      <!-- Easy Pie Chart -->
+      <script src="js/easy-pie-chart.js"></script>
+      <!-- Color box-->
+      <script type="text/javascript" src="js/jquery.colorbox.js"></script>
+       
+        
+      <!-- Google Map API Key-->
+      <script type="text/javascript" src="//maps.googleapis.com/maps/api/js?key=AIzaSyCsa2Mi2HqyEcEnM1urFSIGEpvualYjwwM"></script>
+      <!-- Google Map Plugin-->
+      <script type="text/javascript" src="js/gmap3.js"></script>
+      <!-- Template custom-->
+      <script type="text/javascript" src="js/custom.js"></script>
+   </div>
+   <!--Body Inner end-->
+   <script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-46156385-1', 'cssscript.com');
+  ga('send', 'pageview');
+
+</script>
+</body>
+
+</html>

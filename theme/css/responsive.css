@@ -383,10 +383,10 @@
       height: 0;
    }
    .logo-wrapper.logo-area {
-      height: 90px;
+      height: 70px;
    }
    .logo-area {
-      padding: 20px;
+      height: auto;
    }
    .logo-wrapper.logo-area .logo {
       padding-left: 0;

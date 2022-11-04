@@ -343,6 +343,7 @@ li {
 }
 
 /* Background overlay */
+
 .bg-overlay {
   position: relative;
 }
@@ -543,22 +544,6 @@ section .title-white {
 }
 
 /* Column title small */
-/* Video responsive */
-.embed-responsive {
-  padding-bottom: 56.25%;
-  position: relative;
-  display: block;
-  height: 0;
-  overflow: hidden;
-}
-.embed-responsive iframe {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  border: 0;
-}
 
 /* Input form */
 .form-control {
@@ -1165,8 +1150,10 @@ ul.top-menu li a:hover {
   height: auto;
   min-width: 100%;
   min-height: 100%;
+
 }
 .bisnessVideo {
+  display: flex;
 	min-width: 100%;
 	min-height: 100%;
 }
@@ -2453,12 +2440,12 @@ ul.navbar-nav > li.header-get-a-quote:hover > a:after {
 
 .ts-service-box{
   display: flex;
+  background-color: #fff;
   box-shadow: 0px 2px 20px 0 rgba(0, 0, 0, 0.05);
   transition: transform .2s; 
   align-items: center;
   padding:10px;
   height:400px;
-  gap: 18px;
   border-radius: 4px;
 }
 
@@ -2727,6 +2714,11 @@ h5.mb-0 .project-btn span{
 
 
 /* ts-service-box */
+.ts-service-row-box{
+  display: grid;
+  grid-template: repeat(2, 1fr) / repeat(3, 1fr);
+  grid-gap: 20px;
+}
 
 .ts-service-row-box .ts-service-box {
     background:  #fff;
@@ -2738,6 +2730,13 @@ h5.mb-0 .project-btn span{
     padding:  20px;
     text-align:  center;
 }
+
+.bg-opaque {
+  opacity: 0.75;
+  background: top right no-repeat;
+  background-size: cover;
+}
+
 
 .no-padding .ts-service-pattern {
   padding: 100px 0;

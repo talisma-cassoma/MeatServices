@@ -49,6 +49,7 @@
 :root {
   --ubtGreenColor: #71a028;
   --ubtGreenColorButtonHover:#a5d857;
+  --serviceAreaBackground: #626c84;
 }
 /*=================================================*/
 body {
@@ -672,7 +673,7 @@ button:focus {
 .btn-border,
 .btn-white {
   text-align: center;
-  width: 120px;
+  width: 150px;
   height: 40px;
   font-size: 13px;
   font-weight: 700;
@@ -2368,10 +2369,11 @@ ul.navbar-nav > li.header-get-a-quote:hover > a:after {
   color: #fff;
   z-index: 1;
   position: relative;
-  padding: 50px;
+  padding: 34px;
   display: grid;
-  height: 470px;
-  grid-template-rows:90px 90px  240px 70px;
+  height: inherit;
+  align-items: center;
+  grid-template-rows: 90px 90px inherit 45px;
   text-align: left;
 }
 
@@ -2420,26 +2422,48 @@ ul.navbar-nav > li.header-get-a-quote:hover > a:after {
 /*-- ts-features-row --*/
 
 .feature-light-row {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 8px; 
     margin-top: -15%;
-    background: #fff;
-    box-shadow: 0px 2px 20px 0 rgba(0, 0, 0, 0.05);
+  }
+  
+ .features-light-row-cols-3 {
+  display: grid;
+  margin: 10px 0 10px 0;
+  background-color: #fff;
+  width: 300px;
+  box-shadow: 0px 2px 20px 0 rgba(0, 0, 0, 0.05);
 }
 
-.feature-light-row .text-center {
-    padding: 30px;
-
-}
 /* Ts-Service-Area
 ===================================================*/
 
 /* ts-service-box */
 
-.ts-service-box-img {
-    float: left;
+.ts-service-box{
+  display: flex;
+  box-shadow: 0px 2px 20px 0 rgba(0, 0, 0, 0.05);
+  transition: transform .2s; 
+  align-items: center;
+  padding:10px;
+  height:400px;
+  gap: 18px;
 }
+
+.ts-service-box:hover{
+transform: scale(1.2);
+}
+
+
 
 .ts-service-area h2 {
     margin-bottom: 50px;
+}
+.ts-service-box-info {
+display: grid;
+height: inherit;
+align-items: center;
 }
 
 .ts-service-box-info h3 {
@@ -2457,13 +2481,13 @@ ul.navbar-nav > li.header-get-a-quote:hover > a:after {
     line-height: 24px;
 }
 
-.ts-service-box-info {
+/*.ts-service-box-info {
     margin-left:  100px;
 }
 
 .ts-service-box {
     margin-bottom: 0px;
-}
+}*/
 
 .ts-service-box:after {
     content:  "";
@@ -2696,6 +2720,7 @@ h5.mb-0 .project-btn span{
 .ts-service-row-box .ts-service-box {
     background:  #fff;
     border: 1px solid #eaeaea;
+    padding: 10px;
 }
 
 .ts-service-row-box .ts-service-content {
@@ -2821,8 +2846,8 @@ h5.mb-0 .project-btn span{
     flex-wrap: wrap;
 }
 
-.justify-content-self-center {
-    padding-right: 100px;
+.justify-self-center {
+   justify-self: center;
 }
 
 .ts-service-area {
@@ -4594,30 +4619,26 @@ p.panel-title a.collapsed {
   font-size: 24px;
 }
 
-.ts-features-light .ts-feature-box .ts-feature-info {
-  padding: 0 20px;
+.ts-features-light .ts-feature-info {
+  justify-content: center;
 }
-
 .ts-features-light .ts-feature-box .ts-feature-info p {
   margin-bottom: 0;
 }
 
 .ts-feature-box .ts-feature-title {
   font-size: 20px;
-  margin: 20px 0 10px;
   color: #000;
 }
 .ts-feature-box .ts-feature-info {
   color: #000;
   z-index: 1;
   position: relative;
-  padding: 15px;
 }
 
 .feature-text-box .column-title {
   font-size: 36px;
   line-height: normal;
-  margin-bottom: 10px;
 }
 
 .feature-text-box .column-title span {
@@ -4626,7 +4647,6 @@ p.panel-title a.collapsed {
 
 .feature-text-box .btn {
   padding: 15px 60px;
-  margin-top: 10px;
 }
 
 .feature-img{
@@ -6109,7 +6129,8 @@ body {
 
 .card {
     border: none;
-    border-radius: 10px
+    border-radius: 10px;
+    padding: 10px;
 }
 
 .c-details span {
@@ -6147,20 +6168,3 @@ body {
 .text2 {
     color: #a5aec0
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-

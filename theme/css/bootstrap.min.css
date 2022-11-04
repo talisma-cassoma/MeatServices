@@ -533,7 +533,8 @@ pre code {
   margin-left: auto;
 }
 .row {
-  display: grid;
+  display: flex;
+
 }
 .no-gutters {
   margin-right: 0;

@@ -1160,6 +1160,16 @@ ul.top-menu li a:hover {
   background: #0F2765;
 }
 
+.video-background{
+  width: auto;
+  height: auto;
+  min-width: 100%;
+  min-height: 100%;
+}
+.bisnessVideo {
+	min-width: 100%;
+	min-height: 100%;
+}
 /* Sticky Menu Animation*/
 @-webkit-keyframes menusticky {
   0% {
@@ -1526,7 +1536,7 @@ ul.top-menu li a:hover {
 }
 
 .header.nav-down .logo {
-  height: 110px;
+  height: 90px;
 }
 
 /* header right */
@@ -2449,6 +2459,7 @@ ul.navbar-nav > li.header-get-a-quote:hover > a:after {
   padding:10px;
   height:400px;
   gap: 18px;
+  border-radius: 4%;
 }
 
 .ts-service-box:hover{

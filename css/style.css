@@ -166,6 +166,7 @@ section,
   padding: 80px 0;
   position: relative;
   z-index: 3;
+  background-color: #f5f5f5;
 }
 
 .no-padding {
@@ -1147,14 +1148,17 @@ ul.top-menu li a:hover {
 }
 
 .video-background{
-  width: auto;
-  height: auto;
+  position: relative;
+
   min-width: 100%;
-  min-height: 100%;
+  min-height: 60vh;
 
 }
 .bisnessVideo {
+  position: absolute;
+  z-index: -1;
   display: flex;
+  top: -10%;
 	min-width: 100%;
 	min-height: 100%;
 }
@@ -2423,7 +2427,7 @@ ul.navbar-nav > li.header-get-a-quote:hover > a:after {
 
 .feature-light-row {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(auto-fit, minmax(300px,1fr));
     grid-gap: 8px; 
     margin-top: -15%;
   }

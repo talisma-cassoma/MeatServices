@@ -50,6 +50,7 @@
   --ubtGreenColor: #71a028;
   --ubtGreenColorButtonHover:#a5d857;
   --serviceAreaBackground: #626c84;
+  --cardBoxShadow: 0px 0px 12px rgba(0, 0, 0, 0.08);
 }
 /*=================================================*/
 body {
@@ -2362,16 +2363,18 @@ ul.navbar-nav > li.header-get-a-quote:hover > a:after {
   top: 0;
 }
 
-.ts-feature-info {
+.ts-feature-info, .bg-opaque {
   color: #fff;
-  z-index: 1;
   position: relative;
-  padding: 34px;
   display: grid;
   height: inherit;
   align-items: center;
   grid-template-rows: 90px 90px inherit 45px;
   text-align: left;
+}
+
+.ts-feature-info{
+  padding: 34px;
 }
 
 .ts-feature-title {
@@ -2438,15 +2441,17 @@ ul.navbar-nav > li.header-get-a-quote:hover > a:after {
 
 /* ts-service-box */
 
-.ts-service-box{
+.ts-service-box, .ts-services-card {
   display: flex;
-  background-color: #fff;
   box-shadow: 0px 2px 20px 0 rgba(0, 0, 0, 0.05);
   transition: transform .2s; 
   align-items: center;
-  padding:10px;
   height:400px;
+}
+
+.ts-service-box {
   border-radius: 4px;
+  background-color: #fff;
 }
 
 .ts-service-box:hover{
@@ -2485,13 +2490,14 @@ align-items: center;
 
 .ts-service-box {
     margin-bottom: 0px;
-}*/
+}
 
 .ts-service-box:after {
     content:  "";
     clear:  both;
     display:  block;
-}
+}*/
+
 #ts-features-light > div > div > div > div > div > ul{
   margin-left: 10px;
 }
@@ -2679,6 +2685,18 @@ h5.mb-0 .project-btn span{
    margin-bottom: 10px;
 }
 
+.ts-services-card {
+  box-shadow: 0 0 40px 5px var(--cardBoxShadow);
+  border-radius: 8px;
+}
+
+.ts-services-card, .bg-opaque {
+  border-radius: 8px;
+}
+
+.ts-services-card:hover{
+  transform: scale(1.2)
+}
 /* Single Service */
 
 .single-service-img img{
@@ -2721,7 +2739,7 @@ h5.mb-0 .project-btn span{
 }
 
 .ts-service-row-box .ts-service-box {
-    background:  #fff;
+    /*background:  #fff;*/
     border: 1px solid #eaeaea;
     padding: 10px;
 }
@@ -2732,11 +2750,15 @@ h5.mb-0 .project-btn span{
 }
 
 .bg-opaque {
-  opacity: 0.75;
-  background: top right no-repeat;
+  opacity: 0.65;
+  background-color: black;
   background-size: cover;
+  color: #fff;
 }
 
+.bg-opaque, .ts-service-box {
+  padding: 15px;
+}
 
 .no-padding .ts-service-pattern {
   padding: 100px 0;

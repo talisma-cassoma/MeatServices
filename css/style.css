@@ -3933,9 +3933,94 @@ img.testimonial-thumb {
 }
 
 .clients-area {
+  display: flex;
+  align-items: center;
   background: #f7f9fd;
   padding: 70px 0;
 }
+/*============== carrouselll ===================*/
+.highway-barrier {
+  transition: all .3s ease;
+}
+
+.highway-slider{
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  height: 150px;
+}
+
+.highway-slider .highway-barrier {
+  overflow: hidden;
+  position: relative;
+}
+.highway-barrier {
+  transition: all .3s ease;
+}
+
+.highway-slider ul.highway-lane {
+  display: flex;
+  height: 100%;
+}
+
+.highway-slider ul.highway-lane li.highway-car {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /*background: #fff;*/
+  color: #343434;
+}
+
+.highway-barrier ul.highway-lane li.highway-car {
+  animation: translatestf 30s linear infinite;
+}
+
+@keyframes translatestf {
+  0% {
+    transform: translateX(100%);
+ }
+  100% {
+    transform: translateX(-300%);
+ }
+}
+
+.highway-barrier ul.highway-lane li.highway-car {
+  animation: translatestf 30s linear infinite;
+}
+@keyframes translateinfinite {
+  100% {
+    transform: translateX(calc(-2160px));
+ }
+}
+
+.highway-barrier::before, .highway-barrier::after {
+  content: " ";
+  position: absolute;
+  z-index: 9;
+  width: 180px;
+  height: 100%;
+}
+.highway-barrier::before {
+  top: 0;
+  left: 0;
+  background: linear-gradient(to right, #f7f9fd 0%,rgba(255,255,255,0) 100%);
+}
+.highway-barrier::after {
+  top: 0;
+  right: 0;
+  background: linear-gradient(to left, #f7f9fd 0%,rgba(255,255,255,0) 100%);
+}
+.highway-barrier ul.highway-lane {
+  width: calc(4200px);
+}
+
+.highway-barrier ul.highway-lane li.highway-car {
+  width: 180px;
+  animation: translateinfinite 25s linear infinite;
+}
+
+/*==========================================================================*/
 
 .partner-logo {
   display: -webkit-box;
@@ -3981,6 +4066,7 @@ img.testimonial-thumb {
   -o-filter: grayscale(0%);
   filter: grayscale(0%);
 }
+
 
 .owl-carousel.owl-theme.partners .owl-nav .owl-prev {
   left: -25px;

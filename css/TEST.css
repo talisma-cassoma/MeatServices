@@ -12,17 +12,6 @@ nav,
 section {
     display: block;
 }
-/*css variables*/
-:root {
-  --ubtGreenColor: #71a028;
-  --ubtGreenColorButtonHover:#a5d857;
-  --serviceAreaBackground: #626c84;
-  --cardBoxShadow: 0px 0px 12px rgba(0, 0, 0, 0.08);
-  --textCardFontSize: 0.5rem;
-  --titleCardFontSize: 1.2rem;
-  --buttonTextCardFontSize: 0.5rem;
-  --bigText: 2rem;
-}
 
 body {
     margin: 0;

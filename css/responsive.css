@@ -234,10 +234,6 @@
       margin-bottom: 20px;
    }
    
-   .ts-feature-box .ts-feature-info{
-      margin-top: 20px;
-   }
-   
     /* Header */
    .header.nav-down.nav-box {
       height: 235px;
@@ -549,17 +545,13 @@
   }
   
   /* features */
-  
-  .ts-feature-box .ts-feature-info{
-      margin-top: 20px;
-   }
       
    .feature-light-row .border-left {
     border-left: none !important;
    }
   
   section, .section-padding {
-    padding: 40px 0;
+    padding: 2rem 0;
    }
    .top-info {
     margin: 35px 10px 0;
@@ -681,7 +673,7 @@
    }
 
    .btn.btn-primary, .btn-dark, .btn-border, .btn-white {
-    font-size: 13px;
+   font-size: var(--buttonTextCardFontSize);
     font-weight: 600;
     padding: 10px 15px;
    }

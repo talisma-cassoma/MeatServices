@@ -13,6 +13,12 @@ nav,
 section {
     display: block;
 }*/
+
+*{
+    margin : 0;
+    padding: 0;
+}
+
 /*css variables*/
 :root {
   --ubtGreenColor: #71a028;

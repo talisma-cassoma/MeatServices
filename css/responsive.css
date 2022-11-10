@@ -1,10 +1,17 @@
-@media screen and (max-width: 479px) {
+@media screen and (max-width: 800px) {
     .feature-light-row {
         grid-template-columns: repeat(auto-fit, minmax(9rem, 1fr));
+        grid-gap: 1.2rem;
     }
+    
     li.cardBodyText{
         font-size: small;
     }
+
+    .btn.btn-primary {
+        width: 9rem;
+    }
+
 }
 
 @media (min-width: 576px) {
@@ -368,12 +375,6 @@
         body {
             font-size: var(--textCardFontSize);
         }
-        .video-background{
-          background-image: url("https://media.istockphoto.com/id/1146472948/photo/millennial-black-businesswoman-addressing-colleagues-at-a-corporate-business-meeting-close-up.jpg?s=612x612&w=0&k=20&c=pRFt-m6Af60XAp2saRz4LtFjB6qBfRFki3Tf3c-4xtw=");
-        }
-        .bisnessVideo{
-          display: none;
-        }
         .row-text-cols,
         .ts-service-row-box {
             grid-template-columns: repeat(2, 1fr);
@@ -542,4 +543,34 @@
     }
 }
 
+@media screen and (max-width: 800px) {
+    .video-background{
+        background-image: url("https://media.istockphoto.com/id/1146472948/photo/millennial-black-businesswoman-addressing-colleagues-at-a-corporate-business-meeting-close-up.jpg?s=612x612&w=0&k=20&c=pRFt-m6Af60XAp2saRz4LtFjB6qBfRFki3Tf3c-4xtw=");
+        background-repeat: no-repeat;
+        background-size: cover;
+        min-height: 40vh;
+    }
+      .bisnessVideo{
+        display: none;
+      }
 
+}
+
+@media screen and (max-width: 400px){
+    li.cardBodyText{
+        min-height: 1rem;
+    }
+    .btn.btn-primary {
+        width: 4rem;
+    }
+}
+    
+@media screen and (max-width: 600px) {
+    .row-text-cols {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-gap: 1rem;
+        font-size: small;
+    }
+    
+}

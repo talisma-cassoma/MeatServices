@@ -206,11 +206,16 @@
     .top-info li .info-wrapper p.info-subtitle {
         font-size: 15px;
     }
+    .ts-feature-info{
+        padding: .5rem;
+    }
 
     .btn.btn-primary {
         font-size: var(--buttonTextCardFontSize);
         font-weight: 600;
-        padding: 10px 15px;
+        padding: .5rem;
+        display: grid;
+        align-items: center;
     }
 
     .call-to-action-bg .text-right {
@@ -562,6 +567,10 @@
     }
     .btn.btn-primary {
         width: 4rem;
+    }
+    .ts-service-box, .ts-service-box-info, .ts-services-card {
+        height: max-content;
+        min-height: 30rem;
     }
 }
     

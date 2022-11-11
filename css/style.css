@@ -1557,8 +1557,8 @@ a.top-right-btn.btn.btn-primary {
     padding: 1.2rem 0.9rem;
     color: #000000;
     width: inherit;
-    grid-template-rows: 4rem 3rem minmax(7rem, 9rem) 4rem;
-    row-gap: 1rem;
+    grid-template-rows: 4rem 3rem minmax(7rem, 8rem) 3rem;
+    row-gap: .8rem;
     align-items: baseline;
 }
 

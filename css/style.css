@@ -1595,7 +1595,7 @@ a.top-right-btn.btn.btn-primary {
     box-shadow: 0px 2px 20px 0 rgba(0, 0, 0, 0.05);
     transition: transform .2s;
     align-items: center;
-    height: 22rem;
+    height: 24rem;
 }
 
 .ts-service-box {

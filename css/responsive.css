@@ -235,7 +235,6 @@
         margin-right: 0px;
     }
 
-
     .footer-social ul {
         text-align: center;
         margin-top: 10px;
@@ -276,7 +275,6 @@
         max-width: 100%;
     }
 }
-
 
 @media (min-width: 992px) {
     .container {
@@ -392,7 +390,6 @@
     }
 }
 
-
 @media screen and (min-width: 992px) {
     ul.navbar-nav>li>a i {
         padding-left: 5px;
@@ -412,13 +409,12 @@
         margin-top: 0px;
     }
 }
+
 @media (min-width: 1200px) {
     .container {
         max-width: 1140px;
     }
 }
-
-
 
 @media (min-width: 768px) and (max-width: 991px) {
     .top-info .info-wrapper {
@@ -561,7 +557,7 @@
 
 }
 
-@media screen and (max-width: 400px){
+@media screen and (max-width: 600px){
     li.cardBodyText{
         min-height: 1rem;
     }
@@ -569,12 +565,18 @@
         width: 4rem;
     }
     .ts-service-box, .ts-service-box-info, .ts-services-card {
-        height: max-content;
-        min-height: 30rem;
+        min-height: max-content;
+        height: 33rem;
+    }
+}
+
+@media screen and (max-width: 380px){
+    .ts-service-box, .ts-service-box-info, .ts-services-card {
+        height: 40rem;
     }
 }
     
-@media screen and (max-width: 600px) {
+@media screen and (max-width: 800px) {
     .row-text-cols {
         display: grid;
         grid-template-columns: repeat(2, 1fr);

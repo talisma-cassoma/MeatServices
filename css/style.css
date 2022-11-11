@@ -671,6 +671,12 @@ h5 {
     -webkit-transform: translate3d(0, 0, 0);
 }
 
+.owl-stage-outer {
+    transform: translate3d(-1305px, 0px, 0px); 
+    transition: all 0s ease 0s; 
+    width: 3045px;
+}
+
 .owl-carousel .owl-item {
     -webkit-backface-visibility: hidden;
     -moz-backface-visibility: hidden;
@@ -698,7 +704,7 @@ h5 {
 }
 
 .owl-carousel.owl-loaded {
-    display: block;
+    display: inline-grid;
 }
 
 .owl-carousel .owl-nav .owl-next,

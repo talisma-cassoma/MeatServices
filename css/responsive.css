@@ -596,3 +596,11 @@
     }
 
 }
+
+@media screen and (max-width: 1000px){
+
+.box-content {
+    display: grid;
+    word-wrap: break-word;
+}
+}

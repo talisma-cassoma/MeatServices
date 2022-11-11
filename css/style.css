@@ -156,9 +156,10 @@ h5 {
     margin-left: auto;
 }
 
-.row {
+.box-content{
     display: flex;
 }
+
 
 .row-text-cols {
     display: grid;

@@ -169,6 +169,7 @@
 
     .quote_form {
         padding: 0px 0px 0px;
+        display: grid;
     }
 
     .ts-facts-bg {
@@ -552,9 +553,14 @@
         min-height: 40vh;
     }
       .bisnessVideo{
-        display: none;
-      }
-
+        display: none; 
+    }
+    .box-content{
+        display: grid;
+    }
+    .img-fluid {
+        width: 5rem;
+    }
 }
 
 @media screen and (max-width: 600px){
@@ -564,9 +570,14 @@
     .btn.btn-primary {
         width: 4rem;
     }
-    .ts-service-box, .ts-service-box-info, .ts-services-card {
-        min-height: max-content;
-        height: 33rem;
+
+    .ts-service-row-box {
+        grid-template: repeat(2, 1fr) / repeat(1, 1fr);
+        grid-gap: 1rem;
+    }
+
+    .service-box, .ts-service-box-info, .ts-services-card {
+        height: 19rem;
     }
 }
 
@@ -583,5 +594,5 @@
         grid-gap: 1rem;
         font-size: small;
     }
-    
+
 }

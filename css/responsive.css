@@ -601,3 +601,12 @@
     word-wrap: break-word;
 }
 }
+
+@media  screen and (max-width: 400px) {
+    .row-text-cols{
+        grid-template-columns:  1fr;
+    }
+    .ts-service-box, .ts-service-box-info, .ts-services-card {
+        height: max-content;
+    }
+}

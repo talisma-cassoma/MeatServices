@@ -1597,10 +1597,10 @@ a.top-right-btn.btn.btn-primary {
     align-items: center;
 }
 .ts-service-box{
-    height: 24rem;
+    height: 100%;
 }
 .ts-services-card {
-    height: 15rem;
+    height: 100%;
 }
 
 .ts-service-box {
@@ -1658,7 +1658,8 @@ a.top-right-btn.btn.btn-primary {
 
 .ts-service-row-box {
     display: grid;
-    grid-template: repeat(2, 1fr) / repeat(3, 1fr);
+    grid-template: repeat(2, 1fr) / repeat(3, .8fr);
+    justify-content: center;
     grid-gap: 20px;
 }
 

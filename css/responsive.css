@@ -381,7 +381,7 @@
         }
         .row-text-cols,
         .ts-service-row-box {
-            grid-template-columns: repeat(2, 1fr);
+            grid-template-columns: repeat(2, .8fr);
             grid-gap: 1rem;
         }
     }
@@ -563,23 +563,20 @@
     }
 }
 
-@media screen and (max-width: 600px){
+@media screen and (max-width: 520px){
     li.cardBodyText{
         min-height: 1rem;
     }
 
     .ts-service-row-box {
-        grid-template: repeat(2, 1fr) / repeat(1, 1fr);
+        grid-template-columns: repeat(2, 1fr);
         grid-gap: 1rem;
     }
 }
 
 @media screen and (max-width: 380px){
     .ts-service-box, .ts-service-box-info{
-        height: 40rem;
-    }
-    .ts-services-card {
-        height: 40rem;
+        min-height: max-content;
     }
 }
     
@@ -605,12 +602,6 @@
     .row-text-cols{
         grid-template-columns:  1fr;
     }
-    .ts-service-box, .ts-service-box-info {
-        height: fit-content;
-    }
-    .ts-services-card {
-        height: fit-content;
-    }
 }
 
 @media  screen and (min-width: 400px) and (max-width: 440px) {
@@ -625,4 +616,20 @@
         height: 29rem;
         min-height: auto;
     }
+ }
+ 
+ @media  screen and (min-width: 600px) and (max-width: 850px) {
+    .row-text-cols {
+        grid-template-columns: repeat(3, 1fr);
     }
+    }
+
+ @media  screen and (min-width: 500px) and (max-width: 850px) {
+    .ts-service-row-box {
+            grid-template: repeat(2, 1fr) / repeat(3, 1fr);
+        }
+    }
+
+@media  screen and (min-width: 510px) and (max-width: 775px) {
+
+}

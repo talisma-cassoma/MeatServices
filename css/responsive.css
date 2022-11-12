@@ -9,7 +9,7 @@
     }
 
     .btn.btn-primary {
-        width: 9rem;
+        width: max-content;
     }
 
 }

@@ -617,14 +617,8 @@
         min-height: auto;
     }
  }
- 
- @media  screen and (min-width: 600px) and (max-width: 850px) {
-    .row-text-cols {
-        grid-template-columns: repeat(3, 1fr);
-    }
-    }
 
- @media  screen and (min-width: 500px) and (max-width: 850px) {
+ @media  screen and (max-width: 850px) {
     .ts-service-row-box {
             grid-template: repeat(2, 1fr) / repeat(3, 1fr);
         }

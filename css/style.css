@@ -46,10 +46,6 @@ body {
     outline: 0 !important;
 }
 
-p {
-    margin-top: 0;
-    margin-bottom: 1rem;
-}
 
 ul {
     margin-top: 0;
@@ -904,10 +900,6 @@ h5 {
 }
 
 /*! CSS Used from: http://127.0.0.1:5500/css/style.css */
-* {
-    margin: 0px;
-    padding: 0px;
-}
 
 body {
     background: #fff;

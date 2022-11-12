@@ -572,10 +572,6 @@
         grid-template: repeat(2, 1fr) / repeat(1, 1fr);
         grid-gap: 1rem;
     }
-
-    .service-box, .ts-service-box-info, .ts-services-card {
-        height: 19rem;
-    }
 }
 
 @media screen and (max-width: 380px){
@@ -607,6 +603,20 @@
         grid-template-columns:  1fr;
     }
     .ts-service-box, .ts-service-box-info, .ts-services-card {
-        height: max-content;
+        height: fit-content;
     }
 }
+
+@media  screen and (min-width: 400px) and (max-width: 440px) {
+.ts-service-box, .ts-services-card {
+    height: 33rem;
+    min-height: auto;
+}
+}
+
+@media  screen and (min-width: 440px) and (max-width: 495px) {
+    .ts-service-box, .ts-services-card {
+        height: 29rem;
+        min-height: auto;
+    }
+    }

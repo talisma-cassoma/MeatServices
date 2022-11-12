@@ -184,7 +184,9 @@ h5 {
     padding-left: 15px;
 }
 
-
+.col-lg-6 {
+    overflow: auto;
+}
 
 .form-control {
     display: block;

@@ -175,6 +175,16 @@ h5 {
 .col-lg-6 {
     overflow: auto;
 }
+@media screen and (min-width: 700px) {
+.row-cols{
+    display: grid;
+    grid-template-columns: minmax(6rem, .5fr) auto;
+}
+.text-center{
+    display: flex;
+    justify-content: space-around;
+}
+}
 
 .form-control {
     display: block;

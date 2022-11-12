@@ -1595,7 +1595,12 @@ a.top-right-btn.btn.btn-primary {
     box-shadow: 0px 2px 20px 0 rgba(0, 0, 0, 0.05);
     transition: transform .2s;
     align-items: center;
+}
+.ts-service-box{
     height: 24rem;
+}
+.ts-services-card {
+    height: 15rem;
 }
 
 .ts-service-box {
@@ -1614,7 +1619,7 @@ a.top-right-btn.btn.btn-primary {
 .ts-service-box-info {
     display: grid;
     height: inherit;
-    grid-template-rows: 4.5rem auto;
+    grid-template-rows: 3.5rem auto 2rem;
     align-items: baseline;
     text-align: justify;
     padding: .9rem;

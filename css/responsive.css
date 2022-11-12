@@ -575,7 +575,10 @@
 }
 
 @media screen and (max-width: 380px){
-    .ts-service-box, .ts-service-box-info, .ts-services-card {
+    .ts-service-box, .ts-service-box-info{
+        height: 40rem;
+    }
+    .ts-services-card {
         height: 40rem;
     }
 }
@@ -602,20 +605,23 @@
     .row-text-cols{
         grid-template-columns:  1fr;
     }
-    .ts-service-box, .ts-service-box-info, .ts-services-card {
+    .ts-service-box, .ts-service-box-info {
+        height: fit-content;
+    }
+    .ts-services-card {
         height: fit-content;
     }
 }
 
 @media  screen and (min-width: 400px) and (max-width: 440px) {
-.ts-service-box, .ts-services-card {
+.ts-service-box {
     height: 33rem;
     min-height: auto;
 }
 }
 
 @media  screen and (min-width: 440px) and (max-width: 495px) {
-    .ts-service-box, .ts-services-card {
+    .ts-service-box {
         height: 29rem;
         min-height: auto;
     }

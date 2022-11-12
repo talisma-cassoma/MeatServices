@@ -567,9 +567,6 @@
     li.cardBodyText{
         min-height: 1rem;
     }
-    .btn.btn-primary {
-        width: 4rem;
-    }
 
     .ts-service-row-box {
         grid-template: repeat(2, 1fr) / repeat(1, 1fr);

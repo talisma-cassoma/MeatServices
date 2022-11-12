@@ -56,18 +56,6 @@ ul ul {
     margin-bottom: 0;
 }
 
-a {
-    color: #007bff;
-    text-decoration: none;
-    background-color: transparent;
-    -webkit-text-decoration-skip: objects;
-}
-
-a:hover {
-    color: #0056b3;
-    text-decoration: underline;
-}
-
 figure {
     margin: 0 0 1rem;
 }
@@ -290,34 +278,15 @@ h5 {
 
 .btn-primary {
     color: #fff;
-    background-color: #007bff;
-    border-color: #007bff;
 }
 
-.btn-primary:hover {
-    color: #fff;
-    background-color: #0069d9;
-    border-color: #0062cc;
-}
-
-.btn-primary:focus {
-    box-shadow: 0 0 0 0.2rem rgba(0, 123, 255, 0.5);
-}
-
-.btn-primary:disabled {
-    color: #fff;
-    background-color: #007bff;
-    border-color: #007bff;
-}
 
 .btn-link {
     font-weight: 400;
-    color: #007bff;
     background-color: transparent;
 }
 
 .btn-link:hover {
-    color: #0056b3;
     text-decoration: underline;
     background-color: transparent;
     border-color: transparent;
@@ -1655,14 +1624,14 @@ a.top-right-btn.btn.btn-primary {
 }
 
 .ts-services-card:hover {
-    transform: scale(1.2);
+    transform: scale(1.1);
 }
 
 .ts-service-row-box {
     display: grid;
     grid-template: repeat(2, 1fr) / repeat(3, .8fr);
     justify-content: center;
-    grid-gap: 20px;
+    gap: 1.2rem;
 }
 
 .bg-opaque {

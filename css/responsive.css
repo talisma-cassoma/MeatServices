@@ -379,11 +379,6 @@
         body {
             font-size: var(--textCardFontSize);
         }
-        .row-text-cols,
-        .ts-service-row-box {
-            grid-template-columns: repeat(2, .8fr);
-            grid-gap: 1rem;
-        }
     }
 
     .dropdown-menu {
@@ -569,8 +564,7 @@
     }
 
     .ts-service-row-box {
-        grid-template-columns: repeat(2, 1fr);
-        grid-gap: 1rem;
+        grid-template-columns: repeat(1, 1fr);
     }
 }
 
@@ -618,9 +612,9 @@
     }
  }
 
- @media  screen and (max-width: 850px) {
+ @media  screen and (min-width: 520px) and (max-width: 850px) {
     .ts-service-row-box {
-            grid-template: repeat(2, 1fr) / repeat(3, 1fr);
+            grid-template: repeat(3, 1fr) / repeat(2, 1fr);
         }
     }
 

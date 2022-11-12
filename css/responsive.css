@@ -583,7 +583,11 @@
     }
 
 }
-
+@media screen and (min-width: 900px) and (max-width:1000px){
+    .row-text-cols {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
 @media screen and (max-width: 1000px){
 
 .box-content {

@@ -79,7 +79,8 @@ figure {
 img {
     vertical-align: middle;
     border-style: none;
-    width: 3rem;
+    width: 2rem;
+    height: 2rem;
 }
 
 button {

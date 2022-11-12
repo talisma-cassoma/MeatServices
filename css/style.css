@@ -1690,8 +1690,10 @@ a.top-right-btn.btn.btn-primary {
 }
 
 .testimonial-area .quote-item .quote-text {
-    margin: 40px 0 10px;
-    display: inline-block;
+    margin: 40px 1rem 10px;
+    display: -moz-inline-grid;
+    display: -ms-inline-grid;
+    display: inline-grid;
     padding: 50px 40px 30px 45px;
     background-color: #fff;
     background: #1e2227;
@@ -1898,7 +1900,7 @@ img.testimonial-thumb {
 
 .quote-item-footer {
     margin-top: 40px;
-    margin-left: 0;
+    margin-left: 2rem;
     display: -webkit-box;
     display: -webkit-flex;
     display: -moz-box;

@@ -571,6 +571,9 @@
     .call-to-action-row{
         display: flex;
     }
+.quote-area-row{
+    display: flex;
+}
 }
 @media screen and (max-width: 380px){
     .ts-service-box, .ts-service-box-info{

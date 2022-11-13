@@ -577,7 +577,7 @@
         min-height: max-content;
     }
     .call-to-action-bg {
-        padding: 0;
+        padding:1rem 0;
     }
 }
     

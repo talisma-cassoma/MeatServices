@@ -176,12 +176,13 @@ h5 {
     overflow: auto;
 }
 @media screen and (min-width: 700px) {
-.row-cols{
+.facts-row{
     display: grid;
     grid-template-columns: minmax(9rem, .5fr) minmax(auto, 1fr);
 }
 .text-center{
     display: flex;
+    flex:1;
     justify-content: space-around;
 }
 }

@@ -566,14 +566,18 @@
     .ts-service-row-box {
         grid-template-columns: repeat(1, 1fr);
     }
-    /*.row-cols, .col-md-12 .container{
-        display: grid;
-    }*/
 }
-
+@media screen and (min-width: 500px) {
+    .call-to-action-row{
+        display: flex;
+    }
+}
 @media screen and (max-width: 380px){
     .ts-service-box, .ts-service-box-info{
         min-height: max-content;
+    }
+    .call-to-action-bg {
+        padding: 0;
     }
 }
     
@@ -591,11 +595,21 @@
         grid-template-columns: repeat(3, 1fr);
     }
 }
+
+@media screen and (min-width: 1000px){
+    .footer-row {
+        display: flex;
+    }
+}
+
 @media screen and (max-width: 1000px){
 
 .box-content {
     display: grid;
     word-wrap: break-word;
+}
+.footer-widget{
+    display: contents;
 }
 }
 

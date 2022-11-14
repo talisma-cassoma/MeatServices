@@ -1,5 +1,11 @@
 .banner-area{
-    height: 20vh;
+    height: 30vh;
+}
+.banner-area-container{
+    display: flex;
+    height: 100%;
+    justify-content: center;
+    align-items: center;
 }
 .about-info-text, .about-pattern, .core-value{
     padding: 3rem 20vw;

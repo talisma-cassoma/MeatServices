@@ -1,0 +1,44 @@
+.banner-area{
+    height: 20vh;
+}
+.about-info-text, .about-pattern, .core-value{
+    padding: 3rem 20vw;
+    text-align: justify;
+}
+.about-pattern{
+    display: flex;
+    text-align: justify;
+}
+
+.text-container{
+    display: grid;
+    grid-template-rows: auto auto 3rem;
+    gap: 2rem;
+    width: max-content;
+    margin-right: 2rem;
+
+}
+
+.title, .button-space, .tw-service-value-row {
+    display: flex;
+}
+
+.title{
+    text-align: start;
+}
+.text-body{
+    display: block;
+}
+.button-space{
+    gap: .2rem;
+}
+.services-image{
+    min-width:  20rem;
+    height: inherit;
+    max-height: 25rem;
+}
+
+.card{
+    padding: 1rem 2rem;
+    margin-bottom: 2rem;
+}

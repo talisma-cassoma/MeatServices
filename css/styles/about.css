@@ -23,7 +23,7 @@
 }
 
 #competitive-edge-strategies .container{
-    grid-template-rows: max-content auto 3rem;
+    grid-template-rows: max-content minmax(auto, 11rem) 3rem;
     row-gap: 1rem;
     text-align:  center;
     padding-left: 1rem;

@@ -2018,6 +2018,10 @@ img.testimonial-thumb {
     width: 7rem;
 }
 
+.ubt-logo {
+width: 3.5rem;
+height: 4rem;
+}
 .partner-logo:hover img {
     opacity: 1;
     -webkit-filter: grayscale(0%);

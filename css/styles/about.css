@@ -41,17 +41,20 @@ section {
 .feature-service-box,
 .elementor-icon-list-item,
 .why-ubt-services .container,
-.row-cols-box
+.row-cols-box, 
+.service-area-bg .container
 {
     display: grid;
 }
 
 #competitive-edge-strategies .container{
-    grid-template-rows: max-content minmax(auto, 11rem) 3rem;
+    grid-template-rows: max-content minmax(max-content, 11rem);
     row-gap: 1rem;
     text-align:  center;
     padding-left: 1rem;
     padding-right: 1rem;
+    width: fit-content;
+    max-width: 40rem;
 }
 #breadcrumbs, #go-to, .elementor-button-wrapper{
     display: flex;
@@ -235,15 +238,26 @@ section {
   
 @media screen and (min-width: 300px) {
     .row-text-cols{
-        grid-template-columns: repeat(3, 1fr);
+        grid-template-columns: repeat(2, 1fr);
+        width: 100%;
+        max-width:  50rem;
+        height: 100%;
+        justify-content: center;
+        gap: 1rem;
     }    
 }
+.service-area-bg .container{
+    justify-content: center;
+}
+
 .feature-service-box{
     grid-template-columns: auto;
     padding: 2rem 1rem 2rem 1rem;
     border-radius: 15px 15px 15px 15px;
     box-shadow: 0px 0px 20px 0px rgb(0 0 0 / 23%);
-    min-height: 30rem;
+    height: inherit;
+    width: inherit;
+    min-width: 9rem;
    
 }
 .elementor-icon-list-item{
@@ -268,17 +282,11 @@ grid-template-columns: 1rem auto;
 }
 
 /*---why us---*/
-.why-ubt-services{
-    background-color: #e5e5f7;
-    opacity: 0.8;
-    background-image:  linear-gradient(135deg, #f0f1fa 25%, transparent 25%), linear-gradient(225deg, #f0f1fa 25%, transparent 25%), linear-gradient(45deg, #f0f1fa 25%, transparent 25%), linear-gradient(315deg, #f0f1fa 25%, #e5e5f7 25%);
-    background-position:  12px 0, 12px 0, 0 0, 0 0;
-    background-size: 12px 12px;
-    background-repeat: repeat;
-}
 .why-ubt-services .container{
 text-align: center;
 row-gap: 2rem;
+justify-items: center;
+max-width: 50rem;
 }
 
 .row-cols-box{
@@ -289,13 +297,15 @@ row-gap: 2rem;
 .ubt-service-quality{
     display: flex;
     gap: 1rem;
-    flex: 2 1;
     border-radius: 65px 0px 65px 0px;
     box-shadow: 0px 0px 20px 0px rgb(0 0 0 / 15%);
     padding-top: 40px;
     padding-right: 30px;
     padding-bottom: 40px;
     padding-left: 30px;
+    max-width: 20rem;
+    max-height: 17rem;
+    align-items: center;
 }
 
 .ubt-service-quality-text{
@@ -304,4 +314,10 @@ row-gap: 2rem;
 .elementor-image-box-img img{
     width: 3rem;
     height: 3rem;
+}
+
+@media (min-width: 992px) {
+    .container {
+        max-width:60rem!important;
+    }
 }

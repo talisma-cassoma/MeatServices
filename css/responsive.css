@@ -252,7 +252,7 @@
 
 @media (min-width: 768px) {
     .container {
-        max-width: 720px;
+        max-width: 20rem;
     }
 
     .col-md-4 {
@@ -279,7 +279,7 @@
 
 @media (min-width: 992px) {
     .container {
-        max-width: 960px;
+        max-width:20rem;
     }
     .col-lg-3 {
         -webkit-box-flex: 0;
@@ -643,3 +643,6 @@
 @media  screen and (min-width: 510px) and (max-width: 775px) {
 
 }
+
+/*services page css*/
+

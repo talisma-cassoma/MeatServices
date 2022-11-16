@@ -2,11 +2,32 @@
     width: 100%;
 }
 
-.video-background .elementor-widget-container{
+.image-background-theme{
+    position: relative;
+    background-image: url(https://callnovo.com/wp-content/uploads/2022/01/S-Global-Customer-Service-Contact-Center-1-1.png);
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 40vh;
+}
+.elementor-heading{
     position: absolute;
     bottom: 0;
+    left: 0; 
+    right: 0; 
+    margin-left: auto; 
+    margin-right: auto;
+    background: #000000;
+    opacity: 0.5;
+    color: #fff;
+    height: 2rem;
+    padding: 1rem;
+    display: flex;
+    height: max-content;
+    width: max-content;
+    border-radius: 10px 10px 0px 0px;
+    
 }
-
 #competitive-edge-strategies{
     padding-left: 1rem;
     padding-right: 1rem;
@@ -29,7 +50,7 @@
     padding-left: 1rem;
     padding-right: 1rem;
 }
-#go-to, .elementor-button-wrapper{
+#breadcrumbs, #go-to, .elementor-button-wrapper{
     display: flex;
     justify-content: center;
     width: 100%;
@@ -39,13 +60,14 @@
 }
 .btn-go-to{
     display: flex;
-    width: 2rem;
-    height: 2rem;
+    width: 3.5rem;
+    height: 3.5rem;
     border-radius: 50% !important;
     background-color: var(--ubtGreenColor);
     color: #fff;
 }
 
+.elementor-heading,
 #competitive-edge-strategies .container,
 .btn-go-to, .elementor-button-wrapper,
 .elementor-wifget-text .container,
@@ -56,8 +78,8 @@
     align-items: center;
     text-align: center;
 }
-.video-background,
-.blackBtnBackgroundColor{
+
+ .blackBtnBackgroundColor{
     background-color: var(--blackBtnBackgroundColor)!important;
     color: #fff;
 }
@@ -231,7 +253,7 @@ grid-template-columns: 1rem auto;
     padding: .3rem;
 }
 
-.feature-service-box ul li:last-child{
+.feature-service-box ul li:last-child span {
     border-bottom: none;
 }
 

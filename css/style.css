@@ -147,8 +147,14 @@ h5 {
 
 .box-content, .contact-wrapper{
     display: flex;
+    justify-content: center;
 }
-
+.contact-wrapper .col-lg-6{
+    display: grid;
+    margin:3rem 0;
+    min-height: 30rem;
+    max-width: 30rem;
+}
 .elementor-heading {
     position:absolute;
     bottom: 0;
@@ -2128,8 +2134,7 @@ height: 4rem;
 .footer .widget-title {
     color: #fff;
     font-size: 20px;
-    margin-top: 0;
-    margin-bottom: 30px;
+    margin: .3rem;
 }
 
 .footer-about {
@@ -2382,6 +2387,11 @@ h5.mb-0 a.collapsed:before {
     align-items: center;
 
 }
+.ts-contact-info{
+    display: grid;
+    grid-template-columns: 2.5rem auto;
+    align-items: center;
+}
 
 .ts-contact-info .ts-contact-icon {
     float: left;
@@ -2390,18 +2400,16 @@ h5.mb-0 a.collapsed:before {
 }
 
 .ts-contact-info .ts-contact-content {
-    margin-left: 45px;
-    margin-bottom: 35px;
+    margin: .5rem;
 }
 
 .ts-contact-info .ts-contact-content p {
     margin: 0;
 }
 
-.ts-contact-info .ts-contact-title {
+.ts-contact-info .ts-contact-content .ts-contact-title {
     font-size: 20px;
     margin: 0;
-    color: var(--ubtGreenColor);
 }
 
 .ts-contact-content-title {

@@ -145,11 +145,30 @@ h5 {
     margin-left: auto;
 }
 
-.box-content{
+.box-content, .contact-wrapper{
     display: flex;
 }
 
+.elementor-heading {
+    position:absolute;
+    bottom: 0;
+    margin-left: auto;
+    margin-right: auto;
+    left: 0;
+    right: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    height: 3rem;
+    padding: 2rem;
+    background-color: #000;
+    opacity: .8;
+    width: fit-content;
+    border-top-right-radius: 12px;
+    border-top-left-radius: 12px;
 
+}
 .row-text-cols {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
@@ -1204,6 +1223,15 @@ a[href^=tel] {
     border-bottom: 2px solid var(--ubtGreenColor);
 }
 
+.image-background-theme {
+    position: relative;
+    background-image: url(../../images/banner/banner1.jpg);
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 50vh;
+}
+
 .video-background {
     position: relative;
     min-width: 100%;
@@ -1517,6 +1545,33 @@ a.top-right-btn.btn.btn-primary {
     transform: translateY(-50%);
     -webkit-backface-visibility: hidden;
     backface-visibility: hidden;
+}
+
+.blackBtnBackgroundColor {
+    background-color: var(--blackBtnBackgroundColor) !important;
+    color: #fff;
+}
+
+.elementor-button-wrapper
+{
+justify-content: center;
+align-items: center;
+text-align: center;
+}
+
+.elementor-button-wrapper {
+    min-height: 4rem;
+}
+.elementor-button-wrapper {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+}
+
+#breadcrumbs{
+    display: flex;
+    justify-content: center;
+    width: 100%;
 }
 
 .owl-carousel.owl-theme .owl-nav [class*=owl-prev] {
@@ -2320,6 +2375,14 @@ h5.mb-0 a.collapsed:before {
     transform: rotate(180deg);
 }
 
+.contact-info{
+    display: grid;
+    text-align: justify;
+    padding: 1rem;
+    align-items: center;
+
+}
+
 .ts-contact-info .ts-contact-icon {
     float: left;
     font-size: 20px;
@@ -2338,7 +2401,16 @@ h5.mb-0 a.collapsed:before {
 .ts-contact-info .ts-contact-title {
     font-size: 20px;
     margin: 0;
-    color: #fff;
+    color: var(--ubtGreenColor);
+}
+
+.ts-contact-content-title {
+    color: var(--ubtGreenColor);
+}
+.contact-info-box i {
+    float: left;
+    font-size: 30px;
+    color: var(--ubtGreenColor);
 }
 
 body {

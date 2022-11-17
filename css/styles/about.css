@@ -6,33 +6,7 @@ section {
     width: 100%;
 }
 
-.image-background-theme {
-    position: relative;
-    background-image: url(../../images/banner/banner1.jpg);
-    background-position: center center;
-    background-repeat: no-repeat;
-    background-size: cover;
-    height: 50vh;
-}
 
-.elementor-heading {
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    margin-left: auto;
-    margin-right: auto;
-    background: #000000;
-    opacity: 0.5;
-    color: #fff;
-    height: 2rem;
-    padding: 1rem;
-    display: flex;
-    height: max-content;
-    width: max-content;
-    border-radius: 10px 10px 0px 0px;
-
-}
 
 #competitive-edge-strategies {
     padding-left: 1rem;
@@ -59,17 +33,6 @@ section {
     max-width: 40rem;
 }
 
-#breadcrumbs,
-#go-to,
-.elementor-button-wrapper {
-    display: flex;
-    justify-content: center;
-    width: 100%;
-}
-
-.elementor-button-wrapper {
-    min-height: 4rem;
-}
 
 .black-btn {
     background-color: var(--blackBtnBackgroundColor);
@@ -78,22 +41,14 @@ section {
 }
 
 
-.elementor-heading,
 #competitive-edge-strategies .container,
 .btn-go-to,
-.elementor-button-wrapper,
 .elementor-wifget-text .container,
 .ubt-service-quality .text-center,
 .elementor-icon-list-icon {
     justify-content: center;
     align-items: center;
     text-align: center;
-}
-
-
-.blackBtnBackgroundColor {
-    background-color: var(--blackBtnBackgroundColor) !important;
-    color: #fff;
 }
 
 .ubtBackgroundColor {

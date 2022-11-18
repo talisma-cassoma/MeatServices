@@ -116,8 +116,16 @@ textarea {
     resize: vertical;
 }
 
+h1, h2, h3, h4, h5, h6 {
+    color: #252a37;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 700;
+}
+
 h2 {
-    font-size: 2rem;
+    font-size: 28px;
+    line-height: 30px;
+    margin: 0 0 40px;
 }
 
 h3 {
@@ -131,6 +139,18 @@ h4 {
 h5 {
     font-size: 1.25rem;
 }
+
+p {
+    margin-top: 0;
+    margin-bottom: 1rem;
+    line-height: 24px;
+}
+
+.elementor-cta__content p {
+    font-size: 16px;
+    font-weight: 600;
+}
+
 
 .img-fluid {
     width: 16rem;

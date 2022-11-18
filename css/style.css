@@ -852,9 +852,6 @@ h5 {
     color: #ccc;
 }
 
-#cboxLoadingGraphic {
-    background: url(http://127.0.0.1:5500/images/loading.gif) no-repeat center center;
-}
 
 #cboxPrevious,
 #cboxNext,
@@ -1231,7 +1228,6 @@ a[href^=tel] {
 
 .image-background-theme {
     position: relative;
-    background-image: url(../../images/banner/banner1.jpg);
     background-position: center center;
     background-repeat: no-repeat;
     background-size: cover;

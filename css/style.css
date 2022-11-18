@@ -26,7 +26,7 @@ section {
   --ubtGreenColor: #71a028;
   --blackBtnBackgroundColor: #1E2227;
   --ubtGreenColorButtonHover:#a5d857;
-  --ubtBgPageColor: #f5f5f5;
+  --ubtBgPageColor: #eee;;
   --serviceAreaBackground: #626c84;
   --cardBoxShadow: 0px 0px 12px rgba(0, 0, 0, 0.08);
   --textCardFontSize: 0.5rem;
@@ -994,7 +994,6 @@ section {
     padding: 1rem 0;
     position: relative;
     z-index: 3;
-    background-color: #f5f5f5;
 }
 
 a:focus {
@@ -1965,6 +1964,9 @@ img.testimonial-thumb {
     z-index: 1;
 }
 
+section.carousel-clients-area{
+    background-color: var(--ubtBgPageColor);
+}
 .clients-area {
     display: flex;
     align-items: center;

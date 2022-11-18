@@ -2,12 +2,17 @@ section {
     padding: 5rem 0 !important;
 }
 
+.row-title-box p, .row-title-box h2{
+text-align: center;
+}
+
 .elementor-widget-container {
     width: 100%;
 }
 
-
-
+.video-background {
+    min-height: 60vh !important;
+}
 #competitive-edge-strategies {
     padding-left: 1rem;
     padding-right: 1rem;
@@ -37,7 +42,7 @@ section {
 .black-btn {
     background-color: var(--blackBtnBackgroundColor);
     color: #fff;
-    margin: 0 1rem;
+    margin: 0 .4rem;
 }
 
 

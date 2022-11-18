@@ -144,6 +144,7 @@ p {
     margin-top: 0;
     margin-bottom: 1rem;
     line-height: 24px;
+    text-align: justify;
 }
 
 .elementor-cta__content p {
@@ -1256,7 +1257,7 @@ a[href^=tel] {
 .video-background {
     position: relative;
     min-width: 100%;
-    min-height: 60vh;
+    min-height: 30rem;
     background-color: #fff;
     z-index: -2;
 }
@@ -1371,7 +1372,7 @@ a[href^=tel] {
     font-size: 16px;
     margin-bottom: 0;
     line-height: normal;
-    font-weight: 700;
+    /*font-weight: 700;*/
     color: #252a37;
 }
 
@@ -2298,6 +2299,10 @@ height: 4rem;
 
 .ts-features-light {
     padding-bottom: 10rem;
+
+}
+section{
+    background-color: var(--ubtBgPageColor);
 }
 
 .ts-features-light .ts-feature-info h3 {

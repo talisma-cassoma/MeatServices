@@ -2055,6 +2055,7 @@ section.carousel-clients-area{
 
 .highway-barrier ul.highway-lane {
     width: calc(90rem);
+    gap: 3rem;
 }
 
 .highway-barrier ul.highway-lane li.highway-car {

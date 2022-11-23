@@ -16,7 +16,7 @@
 
 @media (min-width: 576px) {
     .container {
-        max-width: 540px;
+        max-width: 48rem;
     }
 }
 @media (max-width: 767px) {
@@ -250,10 +250,14 @@
     }
 }
 
-@media (min-width: 768px) {
+
+@media screen and (max-width: 550px){
     .container {
-        max-width: 20rem;
+        max-width: 25rem;
     }
+}
+
+@media screen and (min-width: 768px) {
 
     .col-md-4 {
         -webkit-box-flex: 0;
@@ -642,6 +646,15 @@
 
 @media  screen and (min-width: 510px) and (max-width: 775px) {
 
+}
+
+@media screen and (max-width: 500px){
+    .row-cols-box {
+        grid-template-columns: repeat(1, .5fr);
+        gap: 1rem;
+        justify-content: center;
+    }
+    
 }
 
 /*services page css*/

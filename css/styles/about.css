@@ -977,6 +977,14 @@ section {
 }
 
 /*---contact center popluar sevices---*/
+.ubt-service-quality-text{
+    display: grid;
+    grid-template-rows: 4rem auto;
+    height: 100%;
+}
+.ubt-service-quality-text h2{
+    align-items: center;
+}
 @media screen and (max-width: 670px) {
     .ubt-service-quality{
         max-height: max-content;
@@ -1064,10 +1072,6 @@ section {
 .ubt-service-quality .fa {
     color: var(--ubtGreenColor);
     font-size: 2rem;
-}
-
-.ubt-service-quality-text {
-    grid-template-rows: fit-content auto;
 }
 
 .elementor-image-box-img img {

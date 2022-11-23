@@ -1062,10 +1062,6 @@ section {
     border-radius: 65px 0px 65px 0px;
     box-shadow: 0px 0px 20px 0px rgb(0 0 0 / 15%);
     padding: 1.2rem 1rem;
-    min-width: inherit;
-    max-width: 20rem;
-    min-height: inherit;
-    /*max-height: 17rem;*/
     align-items: center;
 }
 

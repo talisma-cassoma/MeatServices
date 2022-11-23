@@ -977,13 +977,13 @@ section {
 }
 
 /*---contact center popluar sevices---*/
-@media screen and (max-width: 300px) {
-.ubt-service-quality {
-    display: flex;
-    width: auto;
-    height: auto;
-    align-items: center;
-}
+@media screen and (max-width: 670px) {
+    .ubt-service-quality{
+        max-height: max-content;
+    }
+    .ubt-service-quality-text h2{
+        font-size: larger;
+    }
 }
 @media screen and (min-width: 300px) {
     .row-text-cols {
@@ -1057,7 +1057,7 @@ section {
     min-width: inherit;
     max-width: 20rem;
     min-height: inherit;
-    max-height: 17rem;
+    /*max-height: 17rem;*/
     align-items: center;
 }
 

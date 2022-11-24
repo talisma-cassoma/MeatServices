@@ -546,7 +546,7 @@
 
 @media screen and (max-width: 800px) {
     .video-background{
-        background-image: url("https://media.istockphoto.com/id/1146472948/photo/millennial-black-businesswoman-addressing-colleagues-at-a-corporate-business-meeting-close-up.jpg?s=612x612&w=0&k=20&c=pRFt-m6Af60XAp2saRz4LtFjB6qBfRFki3Tf3c-4xtw=");
+        background-image: url("../images/pages/alternative-bg.jpg");
         min-height: 40vh;
     }
       .bisnessVideo{

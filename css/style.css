@@ -1248,7 +1248,6 @@ a[href^=tel] {
 
 .image-background-theme {
     position: relative;
-    background-position: center center;
     background-repeat: no-repeat;
     background-size: cover;
     height: 50vh;
@@ -2097,7 +2096,7 @@ section.carousel-clients-area{
     -webkit-transition: 350ms;
     transition: 350ms;
     transition: 350ms;
-    width: 7rem;
+    width: 4rem;
 }
 
 .ubt-logo {
